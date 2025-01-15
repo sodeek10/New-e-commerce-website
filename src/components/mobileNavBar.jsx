@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import "./App.css";
 import { FaSearch, FaShoppingCart, FaLightbulb, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const MobileNavBar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -23,6 +24,9 @@ const MobileNavBar = () => {
         <button className="hamburger" onClick={toggleMenu}>
           <FaBars />
         </button>
+        <div className="cartiz">
+          <Link to="/">Cartiz</Link>
+        </div>
         <div className="icons">
           <button onClick={toggleMode} className="toggle-button">
             <FaLightbulb className="icon" />

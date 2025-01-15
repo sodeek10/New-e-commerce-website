@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
+// import { Link } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 
 const FashionWearSales = () => {
   const [Product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
+  const navigate = useNavigate();
 
   const productsPerPage = 12;
 
@@ -51,10 +54,14 @@ const FashionWearSales = () => {
   if (loading) {
     return <p>Loading products...</p>;
   }
+  // let navigate = useNavigate();
+  const handleViewDetails = (id) => {
+    navigate(`/products/${id}`);
+  };
 
   return (
     <div className="product-container">
-      <h5>This week's higlights</h5>
+      <h5>This week's highlights</h5>
       {currentProducts.map((products, index) => (
         <div key={index} className="products-card">
           <img
@@ -72,7 +79,13 @@ const FashionWearSales = () => {
           <h2>Ratings: {products.rating} ★</h2>
           <div className="button-box flex">
             <button className="add-cart">Add to Cart</button>
-            <button className="view-details">View Details</button>
+
+            <button
+              onClick={() => handleViewDetails(products.id)}
+              className="view-details"
+            >
+              View Details
+            </button>
           </div>
         </div>
       ))}

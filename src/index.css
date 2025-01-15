@@ -456,6 +456,30 @@ h3 {
   color: rgba(255, 255, 255, 1);
   width: 100%;
 }
+h5 {
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  margin-top: 5%;
+}
+h6 {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  margin-top: 1%;
+}
 .body-content3 {
   width: 70%;
 
@@ -536,12 +560,16 @@ h3 {
   }
   .body-image1 {
     width: 100%;
+    margin: 0%;
+    padding: 0%;
   }
   .body-content {
     width: 100%;
   }
   #babe {
     width: 100%;
+    padding: 0%;
+    margin: 0%;
   }
 
   #babes {
@@ -576,6 +604,7 @@ h3 {
   background-color: rgba(34, 41, 52, 1);
 }
 .button-box {
+  width: 100%;
   gap: 4%;
   padding-top: 10px;
 }
@@ -615,4 +644,10 @@ h3 {
     margin-left: 18px;
     gap: 0px;
   }
+}
+.products-cards {
+  padding-top: 20px;
+  width: 100%;
+  gap: 20px;
+  padding-left: 2%;
 }

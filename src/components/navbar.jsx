@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaLightbulb, FaUser, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -24,7 +25,9 @@ const Navbar = () => {
               <option value="option4">South Africa</option>
             </select>
           </div>
-          <div className="cartiz">Cartiz</div>
+          <div className="cartiz">
+            <Link to="/">Cartiz</Link>
+          </div>
           <div className="imgs flex">
             <button onClick={toggleMode} className="toggle-button">
               <FaLightbulb className="icon" />
